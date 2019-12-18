@@ -17,9 +17,11 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.urls import path
 from forms.views import home
+from forms import urls as url_forms
 
 urlpatterns = [
     url(r'^$', home, name='home'),
     url(r'^admin/', admin.site.urls),
+    url(r'^add/', include(url_forms))
     
 ]
