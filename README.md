@@ -1,0 +1,1 @@
+This project is the intent to get django to select the profile data for the logged in user. There is also a part for adding the new profile data and editing the user information. I will aswell add a delete user so that a user can close there account if they so wish.
