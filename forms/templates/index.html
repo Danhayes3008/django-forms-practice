@@ -1,8 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
 <h1>Hello World!</h1>
+{% if request.user.is_authenticated %}
 <p>Username: {{ user.username }}</p>
-<p>name: {{ name.name }}</p>
-<p>gender: {{name.gender}}</p>
-
+<p>name: {{ request.user.profile.name }}</p>
+<p>Gender: {{ request.user.profile.gender }}</p>
+{% else %}
+{% endif %}
 {% endblock %}
